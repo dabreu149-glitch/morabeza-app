@@ -33,7 +33,7 @@ export function HeroSection() {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col gap-3 sm:flex-row">
+        <div className="flex flex-col gap-3 sm:flex-row" id="how-it-works">
           <Button size="lg" asChild className="gap-2 px-8 text-base">
             <Link to="/signup">
               <Upload className="h-4 w-4" />
@@ -47,6 +47,17 @@ export function HeroSection() {
             </Link>
           </Button>
         </div>
+
+        {/* Trust line */}
+        <p className="mt-4 text-sm text-muted-foreground">
+          {locale === "pt"
+            ? "Sem cartão de crédito · ITIN aceito · Disponível em 40+ idiomas"
+            : locale === "es"
+            ? "Sin tarjeta de crédito · ITIN aceptado · Disponible en 40+ idiomas"
+            : locale === "fr"
+            ? "Sans carte de crédit · ITIN accepté · Disponible en 40+ langues"
+            : "No credit card · ITIN accepted · Available in 40+ languages"}
+        </p>
 
         {/* Honest stats */}
         <div className="mt-14 grid grid-cols-3 gap-6 border-t border-border pt-10">
