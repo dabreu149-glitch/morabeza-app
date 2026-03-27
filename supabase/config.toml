@@ -39,7 +39,7 @@ double_confirm_changes = true
 enable_confirmations = true
 
 [auth.external.google]
-enabled = true
+enabled = false
 
 [edge_runtime]
 enabled = true
