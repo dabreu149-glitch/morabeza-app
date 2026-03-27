@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="mx-auto max-w-4xl">
         {/* Eyebrow */}
         <p className="mb-5 text-sm font-medium uppercase tracking-widest text-primary">
-          {locale === "pt" ? "Brockton, Massachusetts" : locale === "es" ? "Brockton, Massachusetts" : "Built for Brockton, Massachusetts"}
+          {locale === "pt" ? "Para famílias imigrantes nos EUA" : locale === "es" ? "Para familias inmigrantes en EE.UU." : locale === "fr" ? "Pour les familles immigrantes aux États-Unis" : "For immigrant families across the U.S."}
         </p>
 
         {/* Headline */}
