@@ -357,7 +357,15 @@ export default function Chat() {
                 >
                   {msg.role === "assistant" ? (
                     <div className="prose prose-sm max-w-none [&>*:first-child]:mt-0 [&>*:last-child]:mb-0">
-                      <ReactMarkdown>{msg.content || "▋"}</ReactMarkdown>
+                      {msg.content ? (
+                        <ReactMarkdown>{msg.content}</ReactMarkdown>
+                      ) : (
+                        <div className="flex items-center gap-1.5 py-1">
+                          <span className="h-2 w-2 rounded-full bg-current opacity-60 animate-bounce [animation-delay:0ms]" />
+                          <span className="h-2 w-2 rounded-full bg-current opacity-60 animate-bounce [animation-delay:150ms]" />
+                          <span className="h-2 w-2 rounded-full bg-current opacity-60 animate-bounce [animation-delay:300ms]" />
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <p className="whitespace-pre-wrap">{msg.content}</p>
