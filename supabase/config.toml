@@ -1,6 +1,3 @@
-[project]
-id = "morabeza-app"
-
 [api]
 enabled = true
 port = 54321
