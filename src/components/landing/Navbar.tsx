@@ -8,7 +8,6 @@ import { supabase } from "@/integrations/supabase/client";
 
 const LANG_OPTIONS = [
   { code: "en" as const, label: "EN" },
-  { code: "kea" as const, label: "KRY" },
   { code: "pt" as const, label: "PT" },
   { code: "es" as const, label: "ES" },
   { code: "fr" as const, label: "FR" },
