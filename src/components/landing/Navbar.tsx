@@ -6,9 +6,17 @@ import { useAuth } from "@/hooks/use-auth";
 import { useTranslation } from "@/lib/i18n";
 import { supabase } from "@/integrations/supabase/client";
 
+const LANG_OPTIONS = [
+  { code: "en" as const, label: "EN" },
+  { code: "kea" as const, label: "KRY" },
+  { code: "pt" as const, label: "PT" },
+  { code: "es" as const, label: "ES" },
+  { code: "fr" as const, label: "FR" },
+];
+
 export function Navbar() {
   const { user } = useAuth();
-  const { t } = useTranslation();
+  const { t, locale, setLocale } = useTranslation();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -29,6 +37,23 @@ export function Navbar() {
               Morabeza<span className="text-primary">.ai</span>
             </span>
           </Link>
+
+          {/* Language switcher */}
+          <div className="hidden items-center gap-1 md:flex">
+            {LANG_OPTIONS.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => setLocale(lang.code)}
+                className={`rounded px-2 py-1 text-xs font-medium transition-colors ${
+                  locale === lang.code
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                }`}
+              >
+                {lang.label}
+              </button>
+            ))}
+          </div>
 
           {/* Desktop nav */}
           <div className="hidden items-center gap-6 md:flex">
@@ -75,6 +100,22 @@ export function Navbar() {
         {/* Mobile menu */}
         {menuOpen && (
           <div className="border-t border-border pb-4 pt-2 md:hidden">
+            {/* Mobile language switcher */}
+            <div className="flex items-center gap-1 px-2 py-2">
+              {LANG_OPTIONS.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => setLocale(lang.code)}
+                  className={`rounded px-2 py-1 text-xs font-medium transition-colors ${
+                    locale === lang.code
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  }`}
+                >
+                  {lang.label}
+                </button>
+              ))}
+            </div>
             <div className="flex flex-col gap-2">
               <Link to="/resources" className="px-2 py-2 text-sm text-muted-foreground" onClick={() => setMenuOpen(false)}>
                 {t("nav.resources")}

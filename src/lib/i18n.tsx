@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 
-type Locale = "en" | "es" | "pt";
+type Locale = "en" | "es" | "pt" | "kea" | "fr";
 
 interface Translations {
   [key: string]: string;
@@ -236,6 +236,156 @@ const translations: Record<Locale, Translations> = {
     "common.copy": "Copiar",
     "common.copied": "Copiado!",
   },
+  kea: {
+    // Nav
+    "nav.home": "Inisiu",
+    "nav.chat": "Papia",
+    "nav.credit": "Kreditu",
+    "nav.dashboard": "Painel",
+    "nav.documents": "Dokumentu",
+    "nav.resources": "Rekursu",
+    "nav.signin": "Entra",
+    "nav.signup": "Kumesa",
+    "nav.signout": "Sai",
+
+    // Landing
+    "hero.title": "Prepara Bu Familia Pa Kompra Kaza",
+    "hero.subtitle":
+      "Manda bu reporte de kreditu. Nos IA ta analiza, ta skriva kartas de disputa, e ta kria bu planu di 90 dia.",
+    "hero.cta": "Kumesa Gratis",
+    "hero.secondary": "Odja Kuma Funxona",
+    "hero.trusted": "Konfiadu pa familias imigrantes na Massachusetts",
+
+    // Features
+    "features.title": "Tudu ki Bu Meste Pa Sta Prontu",
+    "features.subtitle": "Un reporte de kreditu. Preparason kompletu ku IA.",
+
+    // How it works
+    "how.title": "Kuma Ki Funxona",
+    "how.step1.title": "Manda Bu Reporte de Kreditu",
+    "how.step1.desc": "Manda bu PDF. Nu suporta tudu 3 bureaus.",
+    "how.step2.title": "IA Ta Analiza Tudu",
+    "how.step2.desc": "Nos IA ta le kada linha e ta splika tudu na lingua simples.",
+    "how.step3.title": "Resebe Bu Planu",
+    "how.step3.desc": "Kartas de disputa, planu di 90 dia, e bu skoru de prontidão.",
+
+    // Auth
+    "auth.signin.title": "Bem-vindadu di volta",
+    "auth.signin.subtitle": "Entra na bu konta Morabeza",
+    "auth.signup.title": "Prepara-t pa kompra kaza",
+    "auth.signup.subtitle": "Kria bu konta gratis na Morabeza",
+    "auth.email": "Email",
+    "auth.password": "Palavra-passe",
+    "auth.fullname": "Nomi Kompletu",
+    "auth.signin.button": "Entra",
+    "auth.signup.button": "Kria Konta",
+    "auth.google": "Kontinua ku Google",
+    "auth.no_account": "Ka tem konta inda?",
+    "auth.have_account": "Dja tem konta?",
+    "auth.check_email": "Odja bu email pa konfirma bu konta.",
+
+    // Upload
+    "upload.title": "Manda Bu Reporte de Kreditu",
+    "upload.subtitle": "Manda bu PDF e nos IA ta analiza djuntu.",
+    "upload.drag": "Arasta bu PDF pa li",
+    "upload.or": "o",
+    "upload.browse": "Txuba arku",
+    "upload.analyzing": "Ta analiza bu reporte de kreditu...",
+    "upload.success": "Analizi kompletu!",
+
+    // Dashboard
+    "dashboard.title": "Bu Prontidão pa Kompra Kaza",
+    "dashboard.score": "Skoru de Prontidão",
+    "dashboard.credit": "Resumo de Kreditu",
+    "dashboard.disputes": "Kartas de Disputa",
+    "dashboard.plan": "Planu di Ason",
+
+    // Common
+    "common.loading": "Ta karga...",
+    "common.error": "Algum koiza korreru mau. Tenta di novu.",
+    "common.save": "Guarda",
+    "common.cancel": "Kansela",
+    "common.next": "Proksimu",
+    "common.back": "Volta",
+    "common.download": "Baxka",
+    "common.copy": "Kopia",
+    "common.copied": "Kopiadu!",
+  },
+  fr: {
+    // Nav
+    "nav.home": "Accueil",
+    "nav.chat": "Chat",
+    "nav.credit": "Crédit",
+    "nav.dashboard": "Tableau de bord",
+    "nav.documents": "Documents",
+    "nav.resources": "Ressources",
+    "nav.signin": "Se connecter",
+    "nav.signup": "Commencer",
+    "nav.signout": "Se déconnecter",
+
+    // Landing
+    "hero.title": "Préparez Votre Famille pour le Prêt Immobilier",
+    "hero.subtitle":
+      "Téléchargez votre rapport de crédit. Notre IA l'analyse, rédige des lettres de contestation et crée votre plan personnalisé de 90 jours.",
+    "hero.cta": "Commencer Gratuitement",
+    "hero.secondary": "Voir Comment Ça Marche",
+    "hero.trusted": "Approuvé par les familles immigrantes du Massachusetts",
+
+    // Features
+    "features.title": "Tout ce Dont Vous Avez Besoin",
+    "features.subtitle": "Un rapport de crédit. Préparation complète par IA.",
+
+    // How it works
+    "how.title": "Comment Ça Marche",
+    "how.step1.title": "Téléchargez Votre Rapport de Crédit",
+    "how.step1.desc": "Téléchargez votre PDF. Nous supportons les 3 bureaux de crédit.",
+    "how.step2.title": "L'IA Analyse Tout",
+    "how.step2.desc": "Notre IA lit chaque ligne et explique tout en langage simple.",
+    "how.step3.title": "Recevez Votre Plan",
+    "how.step3.desc": "Lettres de contestation, plan de 90 jours et votre score de préparation.",
+
+    // Auth
+    "auth.signin.title": "Bon retour",
+    "auth.signin.subtitle": "Connectez-vous à votre compte Morabeza",
+    "auth.signup.title": "Préparez-vous pour le prêt immobilier",
+    "auth.signup.subtitle": "Créez votre compte Morabeza gratuit",
+    "auth.email": "E-mail",
+    "auth.password": "Mot de passe",
+    "auth.fullname": "Nom Complet",
+    "auth.signin.button": "Se connecter",
+    "auth.signup.button": "Créer un compte",
+    "auth.google": "Continuer avec Google",
+    "auth.no_account": "Pas encore de compte ?",
+    "auth.have_account": "Vous avez déjà un compte ?",
+    "auth.check_email": "Vérifiez votre e-mail pour confirmer votre compte.",
+
+    // Upload
+    "upload.title": "Téléchargez Votre Rapport de Crédit",
+    "upload.subtitle": "Téléchargez votre PDF et notre IA l'analysera instantanément.",
+    "upload.drag": "Glissez-déposez votre PDF ici",
+    "upload.or": "ou",
+    "upload.browse": "Parcourir les fichiers",
+    "upload.analyzing": "Analyse de votre rapport de crédit...",
+    "upload.success": "Analyse terminée !",
+
+    // Dashboard
+    "dashboard.title": "Votre Préparation Hypothécaire",
+    "dashboard.score": "Score de Préparation",
+    "dashboard.credit": "Résumé de Crédit",
+    "dashboard.disputes": "Lettres de Contestation",
+    "dashboard.plan": "Plan d'Action",
+
+    // Common
+    "common.loading": "Chargement...",
+    "common.error": "Une erreur s'est produite. Veuillez réessayer.",
+    "common.save": "Enregistrer",
+    "common.cancel": "Annuler",
+    "common.next": "Suivant",
+    "common.back": "Retour",
+    "common.download": "Télécharger",
+    "common.copy": "Copier",
+    "common.copied": "Copié !",
+  },
 };
 
 interface I18nContextValue {
@@ -249,10 +399,11 @@ const I18nContext = createContext<I18nContextValue | null>(null);
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(() => {
     const saved = localStorage.getItem("morabeza-locale");
-    if (saved && ["en", "es", "pt"].includes(saved)) return saved as Locale;
+    if (saved && ["en", "es", "pt", "kea", "fr"].includes(saved)) return saved as Locale;
     const browserLang = navigator.language.slice(0, 2).toLowerCase();
     if (browserLang === "es") return "es";
     if (browserLang === "pt") return "pt";
+    if (browserLang === "fr") return "fr";
     return "en";
   });
 
