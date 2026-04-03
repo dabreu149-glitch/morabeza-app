@@ -39,7 +39,7 @@ export function CtaSection() {
         <p className="mb-8 text-primary-foreground/80">{sub}</p>
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Button size="lg" variant="secondary" asChild className="gap-2 px-8 text-base">
-            <Link to="/signup">
+            <Link to="/credit">
               <Upload className="h-4 w-4" />
               {btnLabel}
             </Link>

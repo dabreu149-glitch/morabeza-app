@@ -35,7 +35,7 @@ export function HeroSection() {
         {/* CTAs */}
         <div className="flex flex-col gap-3 sm:flex-row" id="how-it-works">
           <Button size="lg" asChild className="gap-2 px-8 text-base">
-            <Link to="/signup">
+            <Link to="/credit">
               <Upload className="h-4 w-4" />
               {t("hero.cta")}
             </Link>

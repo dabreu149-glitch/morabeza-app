@@ -48,14 +48,7 @@ export default function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/resources" element={<Resources />} />
-            <Route
-              path="/credit"
-              element={
-                <ProtectedRoute>
-                  <Credit />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/credit" element={<Credit />} />
             <Route
               path="/agent-progress"
               element={
